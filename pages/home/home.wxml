@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<swiper indicator-dots="true" autoplay="true" interval="2000" circular="true" easing-function="linear">
+  <swiper-item wx:for="{{swiperList}}" wx:key="{{item.id}}">
+    <image src="{{item.image}}"></image>
+  </swiper-item>
+</swiper>
+
+<view class="categries-wraper">
+  <view class="categriesitem-wraper" wx:for="{{categoriesList}}" wx:key="{{item.id}}">
+    <image src="{{item.icon}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+
+<view class="btn-wraper">
+  <button>推荐</button>
+  <button>论坛</button>
+</view>
